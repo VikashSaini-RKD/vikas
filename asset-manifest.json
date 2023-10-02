@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vikas/static/css/main.26baf743.css",
+    "main.js": "/vikas/static/js/main.ae973b81.js",
+    "index.html": "/vikas/index.html",
+    "main.26baf743.css.map": "/vikas/static/css/main.26baf743.css.map",
+    "main.ae973b81.js.map": "/vikas/static/js/main.ae973b81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26baf743.css",
+    "static/js/main.ae973b81.js"
+  ]
+}
