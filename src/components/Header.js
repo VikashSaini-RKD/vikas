@@ -84,7 +84,7 @@ const Header = () => {
                 .then((json) => {
                     setData(json);
                 });
-        } else if (key == 0) {
+        } else if (key === 0) {
             setData(false);
 
         }
@@ -129,7 +129,7 @@ const Header = () => {
                                         return <><NavLink to={`/ShowDataSearch?name=${result.name}`} className='rname m-0 ' key={id} >
                                             <div className='  search_primary  d-flex' style={{ position: "relative", }} onClick={() => setRemoveSearchCard(false) || setNaam(result.name)}>
                                                 <div className='search_image  mx-3 mt-2 '>
-                                                    <img src={`http://localhost:5000/${result.frontimg}`} />
+                                                    <img src={`http://localhost:5000/${result.frontimg}`} alt='img'/>
                                                 </div>
                                                 <p className='pt-3' >{result.name} </p>
                                                 {/* ( {result.ram} & {result.storage} ) */}
@@ -138,7 +138,7 @@ const Header = () => {
                                         </NavLink>
                                         </>
                                     }
-                                    ) : data.length == 0 ? <div className='rname ' style={{fontSize:"1.5vw",marginLeft:"6vw", padding:"2vw"}}>No Data Found <i className='fa-solid fa-cloud mx-3' style={{fontSize:"2.5vw"}}></i></div> : null}</>
+                                    ) : data.length === 0 ? <div className='rname ' style={{fontSize:"1.5vw",marginLeft:"6vw", padding:"2vw"}}>No Data Found <i className='fa-solid fa-cloud mx-3' style={{fontSize:"2.5vw"}}></i></div> : null}</>
                                 }
                             </div>
 
@@ -150,13 +150,13 @@ const Header = () => {
                     {/* user profile code */}
                     <Dropdown className='dropdown'>
                         <Dropdown.Toggle className='drop' style={{ background: "none", border: "none", fontSize: "0px", width: "3px" }}>
-                            {img.img == undefined ? <i className="fa-solid fa-user-circle  user"></i> : <img src={`http://localhost:5000/${img.img}`} style={{ borderRadius: "50%" }} />}
+                            {img.img === undefined ? <i className="fa-solid fa-user-circle  user"></i> : <img src={`http://localhost:5000/${img.img}`} style={{ borderRadius: "50%" }}alt='img' />}
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu >
                             <Dropdown.Item >
                                 <NavLink to="/Profile" className="text-decoration-none text-dark">
-                                    {img.img == undefined ? <i className="fa-solid fa-user-circle mx-3 " style={{ fontSize: "20px" }}></i> : <img src={`http://localhost:5000/${img.img}`} style={{ borderRadius: "50%" }} className=" mx-3 " width="25" height="25" />}
+                                    {img.img === undefined ? <i className="fa-solid fa-user-circle mx-3 " style={{ fontSize: "20px" }}></i> : <img src={`http://localhost:5000/${img.img}`} style={{ borderRadius: "50%" }} className=" mx-3 " width="25" height="25" alt='img'/>}
                                     My Profile</NavLink>
 
                             </Dropdown.Item>

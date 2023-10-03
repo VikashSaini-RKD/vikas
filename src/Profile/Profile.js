@@ -38,7 +38,7 @@ export const Profile = () => {
                 < div className="card-body">
                     < div >
                         <div className="flex-column align-items-center text-center">
-                            {data.img == undefined ? <img src="https://bootdey.com/img/Content/avatar/avatar6.png" className="rounded-circle p-1 bg-primary mb-3" width="140" height="140" /> : <img src={`http://localhost:5000/${data.img}`} className="rounded-circle p-1 bg-primary mb-3" width="140" height="140" />}
+                            {data.img === undefined ? <img src="https://bootdey.com/img/Content/avatar/avatar6.png" className="rounded-circle p-1 bg-primary mb-3" width="140" height="140" alt="img"/> : <img src={`http://localhost:5000/${data.img}`} className="rounded-circle p-1 bg-primary mb-3" width="140" height="140" alt="img"/>}
                             <div className="mt-3">
                                 <h4>{data.name}<Link to={'/UpdateProfile'}><i className="fa-solid fa-pen-to-square m-2 text-secondary fs-0.2" ></i></Link></h4>
                                 <p className="text-secondary mb-2">{data.bio}</p>
@@ -138,7 +138,7 @@ export function UpdateProfile() {
             }).then((result) => {
                 result.json().then((resp) => {
                     // console.log(resp)
-                    if (resp.acknowledged == true) {
+                    if (resp.acknowledged === true) {
                         setAlert(result)
                         const resolveed = new Promise(resolve => setTimeout(resolve, 2000));
                         toast.promise(
@@ -171,7 +171,7 @@ export function UpdateProfile() {
         return () => {
             clearTimeout(id)
         }
-    }, [img])
+    },[img])
 
 
 //image update function
@@ -198,7 +198,7 @@ export function UpdateProfile() {
         <>
             <div className="card container d-flex justify-content-center mt-5 py-3" style={{ maxWidth: "400px", minWidth: "280px" }}>
                 <div className="flex-column align-items-center text-center profilephoto ">
-                    {img ? <img src={`http://localhost:5000/${img}`} className="profilepic rounded-circle p-1 bg-primary " /> : <img src="https://bootdey.com/img/Content/avatar/avatar6.png" className=" profilepic rounded-circle p-1 bg-primary " />}
+                    {img ? <img src={`http://localhost:5000/${img}`} className="profilepic rounded-circle p-1 bg-primary " alt="img"/> : <img src="https://bootdey.com/img/Content/avatar/avatar6.png" className=" profilepic rounded-circle p-1 bg-primary " alt="img"/>}
                     <label><i className=" camera  fa fa-camera fa-beat"></i><input type="file" name="img" onChange={(e) => { setImg(e.target.files[0]) }} hidden /></label>
 
                     <input className="input-box" type="text" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="Enter Name" />

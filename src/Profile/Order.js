@@ -3,7 +3,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 
 const Order = () => {
-    const [data, setData] = useState(false)
+    const [data] = useState(false)
     return (
         <>
             {

@@ -6,7 +6,7 @@ export default function ShowDataSearch() {
     const [company, setBrand] = useState("")
     const [price, setPrice] = useState("")
     const [display, setDisplay] = useState("")
-    const [network, setNetwork] = useState("")
+    // const [network, setNetwork] = useState("")
     const [ram, setRamStorage] = useState("")
     const [storage, setStorage] = useState("")
 
@@ -81,7 +81,7 @@ export default function ShowDataSearch() {
                             <>
                                 <div className='searchCard_primary my-1' onClick={() => navigate(`/CardsInfo/${data._id}`)}>
                                     <div className='searchCard_secondry  '>
-                                        <div className='searchCard_photo '><img src={`http://localhost:5000/${data.frontimg}`} />
+                                        <div className='searchCard_photo '><img src={`http://localhost:5000/${data.frontimg}`} alt='img' />
                                         </div>
 
                                         <div className='searchCard_data_detailes '>
@@ -113,7 +113,7 @@ export default function ShowDataSearch() {
                                 <>
                                     <div className='searchCard_styles_main'>
                                         <div className=" searchCard_styles" key={{ i }}>
-                                            <NavLink to={`/CardsInfo/${element._id}`} ><img src={`http://localhost:5000/${element.frontimg}`} className=' searchCard_style_img' /></NavLink>
+                                            <NavLink to={`/CardsInfo/${element._id}`} ><img src={`http://localhost:5000/${element.frontimg}`} className=' searchCard_style_img' alt='img'/></NavLink>
 
                                             <div className='searchCard_styles_detail '>
                                                 <div className='nameDetaile'>{element.name}  ({element.ram} & {element.storage})</div>
@@ -138,7 +138,7 @@ export default function ShowDataSearch() {
                                 <>
                                     <div className='searchCard_styles_main'>
                                         <div className=" searchCard_styles" key={{ i }}>
-                                            <NavLink to={`/CardsInfo/${element._id}`} ><img src={`http://localhost:5000/${element.frontimg}`} className=' searchCard_style_img' /></NavLink>
+                                            <NavLink to={`/CardsInfo/${element._id}`} ><img src={`http://localhost:5000/${element.frontimg}`} className=' searchCard_style_img' alt='img'/></NavLink>
 
                                             <div className='searchCard_styles_detail '>
                                                 <div className='nameDetaile'>{element.name}  ({element.ram} & {element.storage})</div>

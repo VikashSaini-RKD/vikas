@@ -25,19 +25,19 @@ const getProductData = async () => {
     <div className=' mt-1'>
       <Carousel variant='dark'  >
         <Carousel.Item  >
-          <img className="banner" src="../Images/bn.jpeg" alt="" />
+          <img className="banner" src="../Image/bn.jpeg" alt="" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="banner" src="../Images/bnn.jpeg" alt="S" />
+          <img className="banner" src="../Image/bnn.jpeg" alt="" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="banner" src="../Images/bnnnn.jpeg" alt="" />
+          <img className="banner" src="../Image/bnnnn.jpeg" alt="" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="banner" src="../Images/bnnn.jpeg" alt="" />
+          <img className="banner" src="../Image/bnnn.jpeg" alt="" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="banner" src="../Images/bnm.jpeg" alt=""  />
+          <img className="banner" src="../Image/bnm.jpeg" alt=""  />
         </Carousel.Item>
       </Carousel>
 
