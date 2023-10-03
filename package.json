@@ -1,5 +1,6 @@
 {
   "name": "vikas",
+  "homepage": "https://VikashSaini-RKD.github.io/vikas",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,16 +23,15 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
     "redux": "^4.2.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://VikashSaini-RKD.github.io/vikas"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
