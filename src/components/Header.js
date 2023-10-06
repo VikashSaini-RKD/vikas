@@ -121,7 +121,7 @@ const Header = () => {
                         <div className='search'>
                             <input className='searchbar ' value={naam} type="text" placeholder="Search Products"
                                 onChange={(e) => handleChange(e.target.value) || setRemoveSearchCard(true) || setNaam()} />
-                            <i className="fa-solid fa-search text-dark  searchIcon"></i>
+                            {/* <i className="fa-solid fa-search text-dark  searchIcon"></i> */}
 
                             <div className='searchCard'>
                                 {
